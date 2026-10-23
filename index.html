@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Smart Harvest 🍅 Survey</title>
+  <meta name="description" content="A short, anonymous bilingual survey about a tomato-picking robot for farms in Brunei.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FFF8EE">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%85%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- soft decorative background -->
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  </div>
+
+  <header class="topbar" id="topbar" hidden>
+    <div class="brand"><span class="brand-tomato" aria-hidden="true">🍅</span> Smart Harvest</div>
+    <div class="progress-wrap">
+      <div class="progress-label" id="progressLabel" aria-live="polite"></div>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="11" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="stage" class="stage" tabindex="-1">
+    <noscript>
+      <div class="card"><p>This survey needs JavaScript. Please turn it on and reload.<br>
+      <em>Tinjauan ini memerlukan JavaScript. Sila hidupkannya dan muat semula.</em></p></div>
+    </noscript>
+  </main>
+
+  <footer class="foot">
+    <span>Anonymous survey · <em>Tinjauan tanpa nama</em></span>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="art.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
