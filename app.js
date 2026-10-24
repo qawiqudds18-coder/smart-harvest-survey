@@ -272,6 +272,11 @@
         '<div class="sr-only" id="rankLive" aria-live="polite" style="position:absolute;left:-9999px"></div>' +
         '<div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="website" id="website" tabindex="-1" autocomplete="off"></label></div>' +
         '<div class="confirm-row" id="confirmRow"></div>' +
+        '<div class="suggest-box" style="margin-top:22px">' +
+          '<label for="suggestion" style="display:block;font-weight:700;margin-bottom:4px">💬 Any other ideas or suggestions about the robot? (Optional)</label>' +
+          '<p class="ms" style="margin:0 0 8px">Ada idea atau cadangan lain tentang robot ini? (Pilihan)</p>' +
+          '<textarea id="suggestion" rows="4" maxlength="500" placeholder="Write here… / Tulis di sini…" style="width:100%;box-sizing:border-box;padding:12px;border-radius:12px;border:1.5px solid #e2d6c4;font:inherit;font-size:16px;resize:vertical;background:#fff"></textarea>' +
+        '</div>' +
         '<div id="errorBox" role="alert"></div>' +
         '<div class="nav">' +
           '<button class="btn ghost" id="back" type="button">' + biLabel('← Back', 'Kembali') + '</button>' +
@@ -284,6 +289,11 @@
     var live = node.querySelector('#rankLive');
     var submitBtn = node.querySelector('#submit');
     var confirmRow = node.querySelector('#confirmRow');
+
+    // Optional suggestion box: keep what the person types, even if they go Back.
+    var suggestBox = node.querySelector('#suggestion');
+    suggestBox.value = typeof state.suggestion === 'string' ? state.suggestion : '';
+    suggestBox.addEventListener('input', function () { state.suggestion = suggestBox.value; saveDraft(); });
 
     state.order.forEach(function (key) {
       var f = FEATURE_BY_KEY[key];
@@ -493,6 +503,7 @@
       submissionId: state.submissionId,
       answers: state.answers,
       ranking: state.order.slice(),
+      suggestion: String(state.suggestion || '').trim().slice(0, 500),
       website: (node.querySelector('#website') || {}).value || ''
     };
 
