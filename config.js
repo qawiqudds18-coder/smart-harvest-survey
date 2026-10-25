@@ -3,6 +3,6 @@
 // the browser). That is normal and safe: it is NOT a password, and it can only ADD
 // validated survey rows, never read them.
 window.SMART_HARVEST_CONFIG = {
-  ENDPOINT_URL: "https://script.google.com/macros/s/AKfycbxJkJrqrrQSN1QQGExmCiTx9umOrk6ycUYL20xyU8cBGlNwN01KVFhTUhZE-mOexkttLg/exec",
+  ENDPOINT_URL: "https://script.google.com/macros/s/AKfycbzDNZn9o_TM2_LIo1z5PImcT8ns3OXO4JydLFitYbsNQ4aEnQcOR4zTQNutk3KRl4bolQ/exec",
   REQUEST_TIMEOUT_MS: 20000
 };
