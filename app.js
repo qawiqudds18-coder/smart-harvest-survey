@@ -576,6 +576,9 @@
         '<p class="lead ms">Terima kasih! Jawapan awda sudah disimpan. Awda membantu kami mereka bentuk alat yang lebih pintar untuk petani di Brunei.</p>' +
         '<div style="max-width:260px;margin:14px auto 0">' + window.SH_ART.seedling(40) + '</div>' +
         '<p class="ref">Reference · Rujukan: <span id="refId"></span></p>' +
+        '<p class="lead" style="margin-top:18px">Now try our game: can you spot ripe tomatoes like the robot?</p>' +
+        '<p class="lead ms">Sekarang cuba permainan kami: bolehkah awda mengenal pasti tomato masak seperti robot?</p>' +
+        '<div class="nav" style="justify-content:center;margin-top:16px"><a class="btn primary" id="playGame" style="text-decoration:none" href="https://qawiqudds18-coder.github.io/tomato-detective/?from=survey">' + biLabel('Play Tomato Detective →', 'Main permainan') + '</a></div>' +
       '</section>'
     );
     node.querySelector('#refId').textContent = state.lastId || '';
